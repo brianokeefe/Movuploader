@@ -6,10 +6,10 @@ You will need an account on movember.com to use this app.
 To build the app, File -> Save As..., save as an Application, read-only. 
 Then, run the following command:
 
-cp (location of movuploader)/upload /Applictions/Movuploader.app/Contents/Resources/Scripts
+mv upload /Applications/Movuploader.app/Contents/Resources/Scripts/
+note: you need to comment out the line "tell application "Movuploader" to activate" when working in script builder - apparently it doesn't know that it exists. 
 
 TODO:
 
 icon
-bring applescript frontmost for popup
 package in DMG
