@@ -8,8 +8,3 @@ Then, run the following command:
 
 mv upload /Applications/Movuploader.app/Contents/Resources/Scripts/
 note: you need to comment out the line "tell application "Movuploader" to activate" when working in script builder - apparently it doesn't know that it exists. 
-
-TODO:
-
-icon
-package in DMG
