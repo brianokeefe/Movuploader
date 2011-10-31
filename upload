@@ -11,10 +11,10 @@ pass="$2"
 #elif [ "$vers" = "5" ]; then
 #	path="~/Pictures/Photo\ Booth"
 #else
-	path="~/Pictures/Photo\ Booth\ Library/Pictures"	
+#	path="~/Pictures/Photo\ Booth\ Library/Pictures"	
 #fi
 
-cd "$path"
+cd ~/Pictures/Photo\ Booth\ Library/Pictures
 old=$(ls -t | head -1)
 new=$(date +%d).jpg
 mv "$old" "$new"
