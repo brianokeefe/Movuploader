@@ -5,16 +5,16 @@ pass="$2"
 
 # use a different photo booth directory depending on version of OSX
 
-#vers=`sw_vers | grep "ProductVersion" | cut -d : -f 2 | cut -d "." -f 2`
-#if [ "$vers" = "6" ]; then
-#	path="~/Pictures/Photo\ Booth"
-#elif [ "$vers" = "5" ]; then
-#	path="~/Pictures/Photo\ Booth"
-#else
-#	path="~/Pictures/Photo\ Booth\ Library/Pictures"	
-#fi
+vers=`sw_vers | grep "ProductVersion" | cut -d : -f 2 | cut -d "." -f 2`
+if [ "$vers" = "6" ]; then
+        path="$HOME/Pictures/Photo Booth"
+elif [ "$vers" = "5" ]; then
+        path="$HOME/Pictures/Photo Booth"
+else
+        path="$HOME/Pictures/Photo Booth Library/Pictures"
+fi
 
-cd ~/Pictures/Photo\ Booth\ Library/Pictures
+cd "$path"
 old=$(ls -t | head -1)
 new=$(date +%d).jpg
 mv "$old" "$new"
